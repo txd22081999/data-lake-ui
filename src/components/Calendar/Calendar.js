@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { datesGenerator } from 'dates-generator'
 import clsx from 'clsx'
 import './Calendar.scss'
+import Day from '../Day'
+import { DOTS1 } from '../../utils'
 
 const MONTHS = [
   'Jan',
@@ -101,26 +103,30 @@ const Calendar = () => {
   }
 
   return (
-    <div>
-      <div className='calendar-container'>
-        <div className='month'>{MONTHS[calendar.month]}</div>
+    <div className='calendar-container'>
+      <div className='month'>{MONTHS[calendar.month]}</div>
 
-        <div>
-          <table style={{ width: '100%' }}>
-            <tbody>
-              <tr>
-                {DAYS.map((day) => (
-                  <td key={day} className='day-in-week'>
-                    <div className='day-in-week-text'>{day}</div>
-                  </td>
-                ))}
-              </tr>
+      <div>
+        <table style={{ width: '100%' }}>
+          <tbody>
+            <tr>
+              {DAYS.map((day) => (
+                <td key={day} className='day-in-week'>
+                  <div className='day-in-week-text'>{day}</div>
+                </td>
+              ))}
+            </tr>
 
-              {dates.length > 0 &&
-                dates.map((week, weekIndex) => {
-                  return (
-                    <tr key={JSON.stringify(week[0])} className='week'>
-                      {week.map((each) => (
+            {dates.length > 0 &&
+              dates.map((week, weekIndex) => {
+                return (
+                  <tr key={JSON.stringify(week[0])} className='week'>
+                    {week.map((each) => {
+                      let dots = []
+                      if (each.date === 5) {
+                        dots = DOTS1
+                      }
+                      return (
                         <td
                           key={JSON.stringify(each)}
                           className={clsx(
@@ -132,25 +138,25 @@ const Calendar = () => {
                             ) && 'day-blur'
                           )}
                         >
-                          <div className='day-text'>{each.date}</div>
+                          <Day day={each.date} dots={dots} />
                         </td>
-                      ))}
-                    </tr>
-                  )
-                })}
-            </tbody>
-          </table>
-        </div>
+                      )
+                    })}
+                  </tr>
+                )
+              })}
+          </tbody>
+        </table>
+      </div>
 
-        <div className='control'>
-          <button className='arrow' onClick={onClickPrevious}>
-            <i class='bx bxs-left-arrow'></i>
-          </button>
+      <div className='control'>
+        <button className='arrow' onClick={onClickPrevious}>
+          <i class='bx bxs-left-arrow'></i>
+        </button>
 
-          <button className='arrow' onClick={onClickNext}>
-            <i class='bx bxs-right-arrow'></i>
-          </button>
-        </div>
+        <button className='arrow' onClick={onClickNext}>
+          <i class='bx bxs-right-arrow'></i>
+        </button>
       </div>
     </div>
   )

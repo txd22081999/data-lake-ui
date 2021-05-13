@@ -1,0 +1,19 @@
+.Dot {
+  margin-left: 3px;
+  .content {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    &.green {
+      background-color: rgb(1, 209, 1);
+    }
+    &.red {
+      background-color: red;
+    }
+    &.yellow {
+      background-color: yellow;
+    }
+  }
+}

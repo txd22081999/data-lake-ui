@@ -1,0 +1,25 @@
+.Day {
+  transition: background-color 0.2s ease-in;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  padding-top: 5px;
+
+  &:hover {
+    background-color: rgb(240, 233, 240);
+  }
+
+  .day-text {
+    position: absolute;
+    right: 6px;
+    top: 2px;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 0.9rem;
+  }
+
+  .dot-row {
+    display: flex;
+    margin-bottom: 5px;
+  }
+}
