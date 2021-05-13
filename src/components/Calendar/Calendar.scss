@@ -1,0 +1,52 @@
+.calendar-container {
+  width: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.411);
+  position: relative;
+
+  .month {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .day-in-week {
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    font-size: 1rem;
+
+    .day-in-week-text {
+      text-align: center;
+      padding: 5px 0;
+    }
+  }
+
+  .day {
+    padding: 5px 0;
+
+    .day-text {
+      text-align: center;
+      padding: 4px 0;
+    }
+
+    &.day-blur {
+      opacity: 0.2;
+    }
+  }
+
+  .control {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+
+    .arrow {
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+}
