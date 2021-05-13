@@ -1,5 +1,8 @@
 .Dot {
   margin-left: 3px;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in;
+
   .content {
     background-color: black;
     width: 10px;
@@ -16,4 +19,8 @@
       background-color: yellow;
     }
   }
+}
+
+.dot-hover {
+  opacity: 1 !important;
 }

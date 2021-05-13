@@ -26,15 +26,17 @@ const Day = (props) => {
   }, [dots])
   return (
     <div className='Day'>
-      {dotGroups.map((group, index) => {
-        return (
-          <div className='dot-row'>
-            {group.map((dot) => {
-              return <Dot dot={dot} />
-            })}
-          </div>
-        )
-      })}
+      <div className='dot-group'>
+        {dotGroups.map((group, index) => {
+          return (
+            <div className='dot-row'>
+              {group.map((dot) => {
+                return <Dot dot={dot} />
+              })}
+            </div>
+          )
+        })}
+      </div>
       <div className='day-text'>{day}</div>
     </div>
   )

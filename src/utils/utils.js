@@ -1,82 +1,82 @@
 export const DOTS1 = [
   {
     status: 1,
-    data: 1234,
+    data: { total_data_point: 1234 },
   },
   {
     status: -1,
-    data: 223,
+    data: { total_data_point: 223 },
   },
   {
     status: 1,
-    data: 434,
+    data: { total_data_point: 434 },
   },
   {
     status: 1,
-    data: 3658,
+    data: { total_data_point: 3658 },
   },
   {
     status: 0,
-    data: 236,
+    data: { total_data_point: 236 },
   },
   {
     status: 0,
-    data: 4586,
+    data: { total_data_point: 4586 },
   },
   {
     status: 1,
-    data: 1235,
+    data: { total_data_point: 1235 },
   },
   {
     status: 1,
-    data: 8956,
+    data: { total_data_point: 8956 },
   },
   {
     status: -1,
-    data: 352,
+    data: { total_data_point: 352 },
   },
   {
     status: 1,
-    data: 457,
+    data: { total_data_point: 457 },
   },
   {
     status: 1,
-    data: 1234,
+    data: { total_data_point: 1234 },
   },
   {
     status: -1,
-    data: 223,
+    data: { total_data_point: 223 },
   },
   {
     status: 1,
-    data: 434,
+    data: { total_data_point: 434 },
   },
   {
     status: 1,
-    data: 3658,
+    data: { total_data_point: 3658 },
   },
   {
     status: 0,
-    data: 236,
+    data: { total_data_point: 236 },
   },
   {
     status: 0,
-    data: 4586,
+    data: { total_data_point: 4586 },
   },
   {
     status: 1,
-    data: 1235,
+    data: { total_data_point: 1235 },
   },
   {
     status: 1,
-    data: 8956,
+    data: { total_data_point: 8956 },
   },
   {
     status: -1,
-    data: 352,
+    data: { total_data_point: 352 },
   },
   {
     status: 1,
-    data: 457,
+    data: { total_data_point: 457 },
   },
 ]
